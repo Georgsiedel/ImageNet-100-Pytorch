@@ -2,11 +2,6 @@
 
 PyTorch Implementation: Training ResNets on ImageNet-100 data
 
-# Fork changelog
-Added a script generate_IN100-c.py that lets you create the same class IN-100-c and IN-100-c-bar dataset. Those are the corrupted version of the testset, with 19/10 different corruptions and 5 severity levels each, that have to be looped over. Obtain information towards the corruption benchmarks from:
-ImagenNet-c: https://github.com/hendrycks/robustness
-ImageNet-c-bar: https://github.com/facebookresearch/augmentation-corruption
-
 ## Prepare Datasets (ImageNet)
 ImageNet-1K data could be accessed with [ILSVRC 2012](http://www.image-net.org/challenges/LSVRC/2012/). If ImageNet-1K data is available already, jump to the Quick Start section below to generate ImageNet-100.
 
@@ -41,6 +36,18 @@ python generate_IN100.py \
 ```
 
 Note: Replace `train` with `val` to generate ImageNet-100 val data as well
+
+Corruption Benchmarks:
+
+```
+python generate_IN100.py \
+  --source_folder /path/to/ImageNet-1K-c-(bar) data
+  --target_folder /path/to/ImageNet-100-c-(bar) data
+```
+
+This lets you create the same class IN-100-c and IN-100-c-bar dataset. Those are the corrupted version of the testset, with 19/10 different corruptions and 5 severity levels each, that have to be looped over. Obtain information towards the corruption benchmarks from:
+ImagenNet-c: https://github.com/hendrycks/robustness
+ImageNet-c-bar: https://github.com/facebookresearch/augmentation-corruption
 
 ## Training ResNets on ImageNet-100
 
