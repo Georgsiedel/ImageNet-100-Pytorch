@@ -1,3 +1,7 @@
+## Purpose of Fork
+
+Added generate_IN100-c.py script to also generate the corrupted ImageNet-100-c from ImageNet-c.
+
 # ImageNet-100 (IN100) PyTorch Implementation
 
 PyTorch Implementation: Training ResNets on ImageNet-100 data
